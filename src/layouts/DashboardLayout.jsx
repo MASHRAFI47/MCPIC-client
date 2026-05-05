@@ -15,6 +15,7 @@ import { FaHome } from "react-icons/fa"
 import useAuth from "../hooks/useAuth"
 import { Helmet } from "react-helmet-async"
 import useRole from "../hooks/useRole"
+import MemberMenu from "../components/Dashboard/Menu/MemberMenu"
 
 
 const DashboardLayout = () => {
@@ -52,6 +53,7 @@ const DashboardLayout = () => {
                     <img src={logo} className="w-24" alt="" /> <h1 className="font-bold text-3xl text-white">MCPIC</h1>
                 </div>
                 {role === "admin" && <AdminMenu />}
+                {role === "member" && <MemberMenu />}
                 <hr />
                 <li><NavLink to={'/'}><h1 className="font-bold text-white ml-6 flex items-center gap-2"><FaHome size={20} />Home</h1></NavLink></li>
             </Drawer>

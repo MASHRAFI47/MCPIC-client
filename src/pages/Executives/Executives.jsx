@@ -5,7 +5,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 
-
 //panel member pictures 2022-2023
 import mashrafi from '../../assets/images/panel/mashrafi.jpg'
 import arik from '../../assets/images/panel/Arik.jpg'
@@ -44,6 +43,26 @@ import useAuth from '../../hooks/useAuth';
 import { Helmet } from 'react-helmet-async';
 
 
+//panel member pictures 2025-2026
+import aryan_aviv from "../../assets/images/panel25to26/aryan-kamal-aviv.jpg"
+import raiyan_hasan from "../../assets/images/panel25to26/Raiyan-Hasan.jpg"
+import proloy_charushi from "../../assets/images/panel25to26/Proloy-Charushi.jpeg"
+import maisha_majed from "../../assets/images/panel25to26/Maisha-Majed.jpeg"
+import tasnim_zerin_ohana from "../../assets/images/panel25to26/Tasnim-Zerin-Ohana.jpeg"
+import zaima_khanam_warda from "../../assets/images/panel25to26/Zaima-Khanam-Warda.jpg"
+import abdul_kadir_kabbo from "../../assets/images/panel25to26/abdul-kadir-kabbo.jpeg"
+import soyad_soroar from "../../assets/images/panel25to26/Soyad-Soroar.webp"
+import tasfiah_tasnim from "../../assets/images/panel25to26/Tasfiah-Tasnim.webp"
+import afrida_ahnaf_chowdhury_bevor from "../../assets/images/panel25to26/Afrida-Ahnaf-Chowdhury-Bevor.jpg"
+import zarin_tasnim_nowshin from "../../assets/images/panel25to26/Zarin-Tasnim-Nowshin.webp"
+import arosh_bin_wahid from "../../assets/images/panel25to26/Arosh-Bin-Wahid.png"
+import tazwar_tausif from "../../assets/images/panel25to26/Tazwar-Tausif.jpeg"
+import fuad_bin_qaium from "../../assets/images/panel25to26/Fuad-Bin-Qaium.jpeg"
+import azora_islam_ohie from "../../assets/images/panel25to26/Azora-Islam-Ohie.jpeg"
+import sadia_mobash_sara from "../../assets/images/panel25to26/Sadia-Mubash-Sara.jpeg"
+import nazifa_sumaiya from "../../assets/images/panel25to26/Nazifa-Sumaiya.jpeg"
+
+
 
 const Executives = () => {
     const { theme } = useAuth()
@@ -55,6 +74,114 @@ const Executives = () => {
     //         .then(res => res.json())
     //         .then(data => setYears(data))
     // }, [])
+
+    // 25-26
+    const panelMembers25to26 = [
+        {
+            id: 61,
+            name: "Aryan Kamal Aviv",
+            post: "President",
+            image: aryan_aviv
+        },
+        {
+            id: 62,
+            name: "Raiyan Hasan",
+            post: "Vice President",
+            image: raiyan_hasan
+        },
+        {
+            id: 63,
+            name: "Proloy Charushi",
+            post: "Vice President",
+            image: proloy_charushi
+        },
+        {
+            id: 64,
+            name: "Maisha Majed",
+            post: "Secretary",
+            image: maisha_majed
+        },
+        {
+            id: 65,
+            name: "Tasnim Zerin Ohana",
+            post: "Assistant Secretary",
+            image: tasnim_zerin_ohana
+        },
+        {
+            id: 66,
+            name: "Zaima Khanam Warda",
+            post: "Joint Secretary",
+            image: zaima_khanam_warda
+        },
+        {
+            id: 67,
+            name: "Abdul Kadir Kabbo",
+            post: "IT Head",
+            image: abdul_kadir_kabbo
+        },
+        {
+            id: 68,
+            name: "Soyad Soroar",
+            post: "Head of Content",
+            image: soyad_soroar,
+        },
+        {
+            id: 69,
+            name: "Tasfiah Tasnim",
+            post: "Treasurer",
+            image: tasfiah_tasnim
+        },
+        {
+            id: 70,
+            name: "Afrida Ahnaf Chowdhury Bevor",
+            post: "Organizing Secretary",
+            image: afrida_ahnaf_chowdhury_bevor
+        },
+        {
+            id: 71,
+            name: "Zarin Tasnim Nowshin",
+            post: "Asst. Organizing Secretary",
+            image: zarin_tasnim_nowshin,
+        },
+        {
+            id: 72,
+            name: "Arosh Bin Wahid",
+            post: "Logistician",
+            image: arosh_bin_wahid,
+        },
+        {
+            id: 73,
+            name: "Tazwar Tausif",
+            post: "Content Manager",
+            image: tazwar_tausif,
+        },
+        {
+            id: 74,
+            name: "Fuad Bin Qaium",
+            post: "IT Officer",
+            image: fuad_bin_qaium,
+        },
+        {
+            id: 75,
+            name: "Azora Islam Ohie",
+            post: "Public Relations Officer",
+            image: azora_islam_ohie,
+        },
+        {
+            id: 76,
+            name: "Sadia Mobash Sara",
+            post: "Human Resources Manager",
+            image: sadia_mobash_sara,
+        },
+        {
+            id: 77,
+            name: "Nazifa Sumaiya",
+            post: "Executive",
+            image: nazifa_sumaiya
+        },
+    ]
+
+
 
 
     const panelMembers22to23 = [
@@ -478,10 +605,29 @@ const Executives = () => {
 
                 <Tabs className={'text-center'} data-aos="fade-down">
                     <TabList>
+                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2025-2026</h1></Tab>
                         <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2024-2025</h1></Tab>
                         <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2023-2024</h1></Tab>
                         <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2022-2023</h1></Tab>
                     </TabList>
+
+                    <TabPanel>
+                        <div>
+                            <div className='mt-10'>
+                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                                    {
+                                        panelMembers25to26?.map(panel => <div key={panel?.id} className="card">
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <div className="card-body p-0 mt-4 gap-0">
+                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
+                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                            </div>
+                                        </div>)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </TabPanel>
 
                     <TabPanel>
                         <div>
