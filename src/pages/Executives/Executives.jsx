@@ -617,7 +617,7 @@ const Executives = () => {
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                                     {
                                         panelMembers25to26?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
                                                 <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
                                                 <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
@@ -635,7 +635,7 @@ const Executives = () => {
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                                     {
                                         panelMembers24to25?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
                                                 <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
                                                 <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
@@ -653,7 +653,7 @@ const Executives = () => {
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                                     {
                                         panelMembers23to24?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
                                                 <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
                                                 <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
@@ -670,7 +670,7 @@ const Executives = () => {
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                                     {
                                         panelMembers22to23?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
                                                 <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
                                                 <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
