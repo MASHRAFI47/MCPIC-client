@@ -59,7 +59,7 @@ import arosh_bin_wahid from "../../assets/images/panel25to26/Arosh-Bin-Wahid.png
 import tazwar_tausif from "../../assets/images/panel25to26/Tazwar-Tausif.jpeg"
 import fuad_bin_qaium from "../../assets/images/panel25to26/Fuad-Bin-Qaium.jpeg"
 import azora_islam_ohie from "../../assets/images/panel25to26/Azora-Islam-Ohie.jpeg"
-import sadia_mobash_sara from "../../assets/images/panel25to26/Sadia-Mubash-Sara.jpeg"
+import sadia_mubash_shara from "../../assets/images/panel25to26/Sadia-Mubash-Sara.jpeg"
 import nazifa_sumaiya from "../../assets/images/panel25to26/Nazifa-Sumaiya.jpeg"
 
 
@@ -169,9 +169,9 @@ const Executives = () => {
         },
         {
             id: 76,
-            name: "Sadia Mobash Sara",
+            name: "Sadia Mubash Shara",
             post: "Human Resources Manager",
-            image: sadia_mobash_sara,
+            image: sadia_mubash_shara,
         },
         {
             id: 77,
