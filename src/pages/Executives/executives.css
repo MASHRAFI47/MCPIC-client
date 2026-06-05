@@ -1,7 +1,37 @@
-.react-tabs__tab--selected {
-    background: transparent !important;
+/* Reset DaisyUI interference */
+.react-tabs__tab-list {
+    border-bottom: 1px solid #30c4b6 !important;
 }
 
 .react-tabs__tab {
+    background-color: transparent !important;
     background: transparent !important;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #2dbeb1;
+}
+
+.react-tabs__tab:hover {
+    background: #102220 !important;
+    color: #2dbeb1 !important;
+}
+
+.react-tabs__tab--selected,
+.react-tabs__tab--selected:focus,
+.react-tabs__tab--selected:focus-visible,
+.react-tabs__tab--selected:active {
+    background: #102220 !important;
+    color: #30c4b6 !important;
+    border-radius: 8px !important;
+    border: 1px solid #30c4b6 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.react-tabs__tab:focus,
+.react-tabs__tab:focus-visible {
+    box-shadow: none !important;
+    outline: none !important;
+    color: #2dbeb1 !important;
 }

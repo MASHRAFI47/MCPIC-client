@@ -2,7 +2,6 @@ import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react"
 
 const RecruitExecutiveModal = ({ recruitEmail, open, close, isOpen }) => {
 
-    console.log(recruitEmail)
     return (
         <div>
             <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>

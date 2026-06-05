@@ -9,10 +9,11 @@ import instafollow from '../../assets/images/follow/followinsta.jpeg'
 import useAuth from "../../hooks/useAuth"
 import { Helmet } from "react-helmet-async"
 import { useState } from "react"
+import { GoHorizontalRule } from "react-icons/go"
+import Title from "../../components/Title/Title"
 
 const Blogs = () => {
   const [seeMore, setSeeMore] = useState(false);
-  console.log(seeMore)
   const { theme } = useAuth()
   const axiosCommon = useAxiosCommon()
 
@@ -31,24 +32,34 @@ const Blogs = () => {
   }
 
   return (
-    <section className={`min-h-screen ${theme === "" ? "bg-[#dee8f6]" : ""} px-5 md:px-0 py-12`}>
+    <section className={`min-h-screen ${theme === "" ? "bg-[#dee8f6]" : ""} px-5 md:px-0 py-12 hero-grid`}>
       <Helmet>
         <title>MCPIC | Blogs</title>
       </Helmet>
 
+
       <div className="container mx-auto relative">
-        <div className="grid grid-cols-1 md:grid-cols-4">
+
+        <div data-aos="fade-in" data-aos-delay="">
+          <div className="flex flex-col gap-3">
+            <p className="tags text-[11px] pt-2 flex items-center font-semibold tracking-widest gap-2"><GoHorizontalRule className='scale-x-150' />RECENT UPDATES</p>
+            <Title className="uppercase">POSTS SECTION</Title>
+          </div>
+        </div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-4 mt-10">
           {
             blogs?.map(blog => <div className="col-span-3 border border-neutral-500 rounded-xl mb-20 p-3 text-wrap space-y-5" key={blog?._id} data-aos="fade-in">
-              <h3 className={`${theme === "" ? "text-black" : "text-gray-200"} text-lg`}><span className="text-[#0052cc] font-bold text-lg">Publisher:</span> {blog?.publisher}</h3>
+              <p className={`${theme === "" ? "" : "text-gray-200"} text-lg`}><span className="text-[#30c4b6] font-bold text-lg">Publisher:</span> <span className="inline-block"> <span className="ml-2">{blog?.publisher}</span> </span></p>
 
-              {seeMore ? 
-              <p className={`${theme === "" ? "text-black" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#0052cc] font-bold text-md">Description:</span> {blog?.description} </p> 
-              : 
-              <p className={`${theme === "" ? "text-black" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#0052cc] font-bold text-md">Description:</span> {blog?.description.length > 500 ? blog?.description.slice(0, 500).concat("...") : blog?.description}</p>}
+              {seeMore ?
+                <p className={`${theme === "" ? "" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#30c4b6] font-bold text-md">Description:</span> <span className="ml-2">{blog?.description}</span> </p>
+                :
+                <p className={`${theme === "" ? "" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#30c4b6] font-bold text-md">Description:</span> <span className="ml-2">{blog?.description.length > 500 ? blog?.description.slice(0, 500).concat("...") : blog?.description}</span></p>}
 
-              {blog?.description.length > 400 ? <span className="font-bold text-sm" onClick={handleSeeMore}>{seeMore ? "See Less" : "See More"}</span> : ""}
-              <p className={`${theme === "" ? "text-black" : "text-gray-200"}`}><span className="text-[#0052cc] font-bold text-md">Publish Date:</span> {moment(blog?.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</p>
+              {blog?.description.length > 400 ? <span className="font-semibold text-[#a89ec9] text-xs" onClick={handleSeeMore}>{seeMore ? "See Less" : "See More"}</span> : ""}
+              <p className={`${theme === "" ? "" : "text-gray-200"}`}><span className="text-[#30c4b6] font-bold text-md">Publish Date:</span> <span className="ml-2">{moment(blog?.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</span></p>
               <img src={blog?.image_url} className="w-full h-[20rem] md:h-[35rem] rounded-lg object-cover md:object-contain bg-black/10" alt="blog image" />
             </div>)
           }

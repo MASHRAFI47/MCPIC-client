@@ -27,7 +27,6 @@ const ManageUsersDataRow = ({ user, refetch }) => {
             return data
         },
         onSuccess: (data) => {
-            console.log(data)
             refetch()
         }
     })
@@ -78,7 +77,6 @@ const ManageUsersDataRow = ({ user, refetch }) => {
 
     const onSubmit = (data) => {
         setBtnLoading(true)
-        console.log(userID)
         mutateDesignation(data)
     }
 

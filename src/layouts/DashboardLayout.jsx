@@ -31,7 +31,7 @@ const DashboardLayout = () => {
     return (
         <div className="md:flex">
             <Helmet>
-                <title>MCPITC | Dashboard</title>
+                <title>MCPIC | Dashboard</title>
             </Helmet>
 
 

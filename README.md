@@ -1,6 +1,6 @@
 # Meal Lounge
 
-## Live Link: Here goes the website live link: [MCPITC_Club](https://mcpitc.web.app/)
+## Live Link: Here goes the website live link: [MCPIC_Club](https://mcpitc.web.app/)
 
 
 Technologies Used: Tailwind, Firebase, ReactJS, NodeJS, ExpressJS, MongoDB

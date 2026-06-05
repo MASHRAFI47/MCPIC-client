@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 
 
 const UpdateBlogModal = ({ blogData, setBlogData }) => {
-    console.log(blogData)
     const axiosSecure = useAxiosSecure()
     const [loading, setLoading] = useState(false)
 
@@ -26,7 +25,6 @@ const UpdateBlogModal = ({ blogData, setBlogData }) => {
             return data
         },
         onSuccess: (data) => {
-            console.log(data)
             toast.success("Blog Updated Successfully")
             reset()
             setLoading(false)
@@ -42,7 +40,6 @@ const UpdateBlogModal = ({ blogData, setBlogData }) => {
         const displayImage = image[0];
         const picture = await imageUpload(displayImage)
         setLoading(true)
-        console.log(data)
         await mutateAsync({ title, description, image_url: picture })
     }
 

@@ -15,3 +15,10 @@
     display: block;
     width: 100%;
 }
+
+.swiper-pagination-bullet{
+    background-color: green;
+} 
+.swiper-pagination-bullet-active {
+    background-color: #30c3b6;
+}

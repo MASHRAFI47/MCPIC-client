@@ -62,6 +62,10 @@ import azora_islam_ohie from "../../assets/images/panel25to26/Azora-Islam-Ohie.j
 import sadia_mubash_shara from "../../assets/images/panel25to26/Sadia-Mubash-Sara.jpeg"
 import nazifa_sumaiya from "../../assets/images/panel25to26/Nazifa-Sumaiya.jpeg"
 
+import './executives.css'
+import { GoHorizontalRule } from 'react-icons/go';
+import Title from '../../components/Title/Title';
+
 
 
 const Executives = () => {
@@ -585,11 +589,19 @@ const Executives = () => {
 
 
     return (
-        <section className={`${theme === "" ? "bg-[#dee8f6]" : ""} py-12`}>
+        <section className={`${theme === "" ? "bg-[#dee8f6]" : ""} py-12 px-8 md:px-10 lg:px-0 hero-grid`}>
             <Helmet>
-                <title>MCPITC | Executives</title>
+                <title>MCPIC | Executives</title>
             </Helmet>
             <div className="container mx-auto">
+
+                <div data-aos="fade-right" data-aos-delay="300">
+                    <div className="flex flex-col gap-3">
+                        <p className="tags text-[11px] pt-2 flex items-center font-semibold tracking-widest gap-2"><GoHorizontalRule className='scale-x-150' />THE TEAM</p>
+                        <Title className="uppercase">EXECUTIVE <br /> COMMITTEE</Title>
+                        <p className="text-[0.95rem] mt-3 mb-10">Meet the driven individuals leading MCPIC forward.</p>
+                    </div>
+                </div>
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <div>
                         <h1 className="text-4xl font-bold text-white">Meet Our <br /> <span className="text-[#e92bde]">Executives</span></h1>
@@ -604,26 +616,34 @@ const Executives = () => {
                 </div> */}
 
                 <Tabs className={'text-center'} data-aos="fade-down">
+                    {/* <span className='bg-[#102220] self-start text-[#2dbeb1] border border-[#17403b] rounded-2xl text-xs p-2'>FULL STACK WEB DEVELOPER</span> */}
                     <TabList>
-                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2025-2026</h1></Tab>
-                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2024-2025</h1></Tab>
-                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2023-2024</h1></Tab>
-                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2022-2023</h1></Tab>
+                        <Tab style={{ color: "#2dbeb1" }} className={"focus:bg-[#102220] inline-block py-2 px-3"}><h1 className='text-xl font-bold'>2025-2026</h1></Tab>
+                        <Tab style={{ color: "#2dbeb1" }} className={"focus:bg-[#102220] inline-block py-2 px-3"}><h1 className='text-xl font-bold'>2024-2025</h1></Tab>
+                        <Tab style={{ color: "#2dbeb1" }} className={"focus:bg-[#102220] inline-block py-2 px-3"}><h1 className='text-xl font-bold'>2023-2024</h1></Tab>
+                        <Tab style={{ color: "#2dbeb1" }} className={"focus:bg-[#102220] inline-block py-2 px-3"}><h1 className='text-xl font-bold'>2022-2023</h1></Tab>
                     </TabList>
 
                     <TabPanel>
                         <div>
                             <div className='mt-10'>
-                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                                    {
-                                        panelMembers25to26?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
-                                            <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
-                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 items-stretch">
+                                    {panelMembers25to26?.map(panel => (
+                                        <div className="card bg-[#0b1514] shadow-sm h-full">
+                                            <figure className="h-48 w-full overflow-hidden">
+                                                <img
+                                                    src={panel?.image}
+                                                    alt={panel?.name}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </figure>
+
+                                            <div className="card-body">
+                                                <h2 className="text-center text-[#e8f5f3]">{panel?.name}</h2>
+                                                <p className='text-[#30c4b6] text-xs'>{panel?.post}</p>
                                             </div>
-                                        </div>)
-                                    }
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -632,16 +652,23 @@ const Executives = () => {
                     <TabPanel>
                         <div>
                             <div className='mt-10'>
-                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                                    {
-                                        panelMembers24to25?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
-                                            <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
-                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 items-stretch">
+                                    {panelMembers24to25?.map(panel => (
+                                        <div className="card bg-[#0b1514] shadow-sm h-full">
+                                            <figure className="h-48 w-full overflow-hidden">
+                                                <img
+                                                    src={panel?.image}
+                                                    alt={panel?.name}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </figure>
+
+                                            <div className="card-body">
+                                                <h2 className="text-center text-[#e8f5f3]">{panel?.name}</h2>
+                                                <p className='text-[#30c4b6] text-xs'>{panel?.post}</p>
                                             </div>
-                                        </div>)
-                                    }
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -650,16 +677,23 @@ const Executives = () => {
                     <TabPanel>
                         <div>
                             <div className='mt-10'>
-                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                                    {
-                                        panelMembers23to24?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
-                                            <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
-                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 items-stretch">
+                                    {panelMembers23to24?.map(panel => (
+                                        <div className="card bg-[#0b1514] shadow-sm h-full">
+                                            <figure className="h-48 w-full overflow-hidden">
+                                                <img
+                                                    src={panel?.image}
+                                                    alt={panel?.name}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </figure>
+
+                                            <div className="card-body">
+                                                <h2 className="text-center text-[#e8f5f3]">{panel?.name}</h2>
+                                                <p className='text-[#30c4b6] text-xs'>{panel?.post}</p>
                                             </div>
-                                        </div>)
-                                    }
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -667,16 +701,23 @@ const Executives = () => {
                     <TabPanel>
                         <div>
                             <div className='mt-10'>
-                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                                    {
-                                        panelMembers22to23?.map(panel => <div key={panel?.id} className="card">
-                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt={panel?.name} /></figure>
-                                            <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
-                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 items-stretch">
+                                    {panelMembers22to23?.map(panel => (
+                                        <div className="card bg-[#0b1514] shadow-sm h-full">
+                                            <figure className="h-48 w-full overflow-hidden">
+                                                <img
+                                                    src={panel?.image}
+                                                    alt={panel?.name}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </figure>
+
+                                            <div className="card-body">
+                                                <h2 className="text-center text-[#e8f5f3]">{panel?.name}</h2>
+                                                <p className='text-[#30c4b6] text-xs'>{panel?.post}</p>
                                             </div>
-                                        </div>)
-                                    }
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

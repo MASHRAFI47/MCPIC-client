@@ -3,17 +3,24 @@ import About from "./About/About"
 import Achievements from "./Achievements/Achievements"
 import Banner from "./Banner/Banner"
 import Sectors from "./Sectors/Sectors"
+import Marquee from "../../components/HomePage/Marquee/Marquee"
+import WhoWeAre from "../../components/HomePage/WhoWeAre/WhoWeAre"
+import RecentEvents from "../../components/HomePage/RecentEvents/RecentEvents"
 
 const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>MCPITC | Home</title>
+        <title>MCPIC | Home</title>
       </Helmet>
 
       <Banner />
-      <About />
-      <Sectors />
+      <Marquee />
+      <WhoWeAre />
+      <RecentEvents />
+
+      {/* <About /> */}
+      {/* <Sectors /> */}
       <Achievements />
     </div>
   )

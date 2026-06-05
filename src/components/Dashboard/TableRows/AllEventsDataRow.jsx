@@ -17,7 +17,6 @@ const AllEventsDataRow = ({ eve, refetch }) => {
             return data
         },
         onSuccess: (data) => {
-            console.log(data)
             refetch()
             toast.success("Event Deleted Successfully")
         }

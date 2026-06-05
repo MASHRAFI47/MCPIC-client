@@ -30,7 +30,6 @@ const AllBlogsDataRow = ({ blog, refetch }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
                         refetch()
                     })
 

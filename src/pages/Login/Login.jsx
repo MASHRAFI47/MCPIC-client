@@ -73,30 +73,36 @@ const Login = () => {
 
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center">
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto">
+        <section className="min-h-screen flex flex-col items-center justify-center hero-grid !border-2 !border-[#122e2a]">
+            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-[#0b1514] border mx-auto">
                 <form className="card-body" onSubmit={handleSubmitLogin(loginSubmit)}>
-                    <h1 className="text-2xl font-bold text-center">Sign In</h1>
-                    <p className="text-center text-neutral-500">Sign in to access your account</p>
+
+                    <div className="flex items-center justify-center gap-1">
+                        <img src="./mcpic-logo.png" alt="mcpic-logo" className="w-12" />
+                        <span className="text-center font-semibold"><p>MCPIC</p></span>
+                    </div>
+
+                    <h1 className="text-3xl font-bold text-center text-[#e8f5f3]">WELCOME BACK</h1>
+                    <p className="text-center text-sm">Sign in to access your account</p>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-[#4a6564]">Email</span>
                         </label>
-                        <input type="email" placeholder="email" className="input input-bordered" {...registerLogin("email", { required: true })} />
+                        <input type="email" placeholder="your@gmail.com" className="input input-bordered bg-[#0d1c1a] text-[#e8f5f3] placeholder:text-[#4a6564]" {...registerLogin("email", { required: true })} />
                         {loginErrors.email && <span className="text-red-600">This field is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-[#4a6564]">Password</span>
                         </label>
-                        <input type="password" placeholder="password" className="input input-bordered" {...registerLogin("password", { required: true })} />
+                        <input type="password" placeholder="*********" className="input input-bordered bg-[#0d1c1a] text-[#e8f5f3] placeholder:text-[#4a6564]" {...registerLogin("password", { required: true })} />
                         {loginErrors.password && <span className="text-red-600">This field is required</span>}
                         <label className="label">
-                            <span onClick={() => setIsOpen(true)} className="label-text-alt link link-hover">Forgot password?</span>
+                            <span onClick={() => setIsOpen(true)} className="label-text-alt link link-hover"><p className="hover:underline">Forgot password?</p></span>
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button type="submit" className="btn glass bg-[#4B70F5] hover:bg-[#ff3535] text-white">Login</button>
+                        <button type="submit" className="text-sm font-semibold py-2 rounded-2xl md:mr-5 px-5 border-[#30c4b6] bg-[#30c4b6] text-[#080f0e] hover:bg-[#1c9e92] hover:border-[#30c4b6] transition-all ease-in-out duration-1000">Login</button>
                     </div>
 
                 </form>
@@ -104,8 +110,9 @@ const Login = () => {
                 <ForgetPassModal open={open} close={close} isOpen={isOpen} />
 
 
-                <p className="text-center mb-10">New user? <Link to={'/register'} className="font-bold hover:text-red-600">Register Now</Link></p>
+                <p className="text-center text-sm mb-3">New user? <Link to={'/register'} className="font-bold text-[#30c4b6] hover:text-[#a89ec9]">Register Now</Link></p>
 
+                <Link to={'/'} className="mb-10 text-center text-xs"><p className="text-neutral-600">Back To Home</p></Link>
             </div>
         </section>
     )

@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    overflow-x:hidden;
+*,
+::before,
+::after {
+    border-color: #122e2a;
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 h1,
@@ -13,11 +20,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Playfair Display", serif;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    color: #89aca8;
+}
+
+.tags {
+    font-family: "IBM Plex Mono", monospace;
+    color: #30c4b6;
 }
 
 /* a.text-white.font-bold.active {
@@ -35,5 +48,10 @@ p {
     background-image: linear-gradient(to bottom, #0101a3, #00004c);
 }
 
+.hero-grid {
+    background-color: #080f0e;
+    background-size: 100px 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3Cpattern id='smallGrid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%231a3d3d' stroke-width='0.5' opacity='0.2'/%3E%3C/pattern%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Crect width='60' height='60' fill='url(%23smallGrid)'/%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='%231a3d3d' stroke-width='1' opacity='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
 
-
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%230a1414' stroke-width='0.5' opacity='0.3'%3E%3Cpath d='M0 0H80V80H0Z'/%3E%3Cpath d='M10 0V80M20 0V80M30 0V80M40 0V80M50 0V80M60 0V80M70 0V80'/%3E%3Cpath d='M0 10H80M0 20H80M0 30H80M0 40H80M0 50H80M0 60H80M0 70H80'/%3E%3C/g%3E%3Cg stroke='%230a1414' stroke-width='1.5' opacity='0.6'%3E%3Cpath d='M0 0H80V80H0Z'/%3E%3Cpath d='M40 0V80M0 40H80'/%3E%3C/g%3E%3C/svg%3E"); */
+}
