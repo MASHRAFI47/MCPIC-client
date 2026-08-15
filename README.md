@@ -1,4 +1,4 @@
-# Meal Lounge
+# MCPIC 
 
 ## Live Link: Here goes the website live link: [MCPIC_Club](https://mcpscictclub.com/)
 
